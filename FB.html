@@ -1,0 +1,215 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/color.js@1.2.0/dist/color.js"></script>
+    <script src="FB.js"></script>
+
+    <link rel="stylesheet" href="FB.css" />
+
+    <title>Football</title>
+  </head>
+  <body>
+    <div id="apikey-container">
+      <label for="apikey">API Key:</label>
+      <input type="password" id="apikey" placeholder="Enter API Key" />
+    </div>    
+
+    <div id="logo-container">
+      <img id="team-logo" src="" alt="Team Logo" />
+    </div>
+
+    <h1>College Football Information</h1>
+    <h2 id="Title">Season Records | Game Data | Season Poll Data</h2>
+
+    <form>
+      <div>
+        <label for="teamName">Team Name: </label>
+        <input type="text" id="teamName" name="name" placeholder="Team Name" />
+      </div>
+
+      <div>
+        <label for="year">Year: </label>
+        <input type="int" id="year" name="name" placeholder="Year" />
+      </div>
+
+      <div>
+        <label for="conference">Conference: </label>
+        <select id="conference" name="conference">
+          <option value="">Select</option>
+          <option value="ACC">ACC</option>
+          <option value="B12">B12</option>
+          <option value="B1G">B1G</option>
+          <option value="CUSA">CUSA</option>
+          <option value="Ind">Ind</option>
+          <option value="MAC">MAC</option>
+          <option value="MWC">MWC</option>
+          <option value="PAC">PAC</option>
+          <option value="SEC">SEC</option>
+          <option value="SBC">SBC</option>
+          <option value="AAC">AAC</option>
+          <option value="Pac-10">Pac-10</option>
+          <option value="BE">BE</option>
+          <option value="ASUN-WAC">ASUN-WAC</option>
+          <option value="Big Sky">Big Sky</option>
+          <option value="Big South">Big South</option>
+          <option value="Colonial Athletic Association">
+            Colonial Athletic Association
+          </option>
+          <option value="Ivy League">Ivy League</option>
+          <option value="Mid-Eastern Athletic Conference">
+            Mid-Eastern Athletic Conference
+          </option>
+          <option value="Missouri Valley Football Conference">
+            Missouri Valley Football Conference
+          </option>
+          <option value="Northeast Conference">Northeast Conference</option>
+          <option value="Ohio Valley Conference">Ohio Valley Conference</option>
+          <option value="Patriot League">Patriot League</option>
+          <option value="Pioneer Football League">
+            Pioneer Football League
+          </option>
+          <option value="Southwestern Athletic Conference">
+            Southwestern Athletic Conference
+          </option>
+          <option value="Southern Conference">Southern Conference</option>
+          <option value="Southland Conference">Southland Conference</option>
+          <option value="American Rivers Conference">
+            American Rivers Conference
+          </option>
+          <option value="American Southwest">American Southwest</option>
+          <option value="CCIW">CCIW</option>
+          <option value="Centennial">Centennial</option>
+          <option value="Commonwealth Coast Conference">
+            Commonwealth Coast Conference
+          </option>
+          <option value="ECFC">ECFC</option>
+          <option value="Empire 8">Empire 8</option>
+          <option value="Heartland">Heartland</option>
+          <option value="Big 8">Big 8</option>
+          <option value="Pac-8">Pac-8</option>
+          <option value="MVIAA">MVIAA</option>
+          <option value="RMC">RMC</option>
+          <option value="SWC">SWC</option>
+          <option value="PCC">PCC</option>
+          <option value="Southern">Southern</option>
+          <option value="Big 6">Big 6</option>
+          <option value="MVC">MVC</option>
+          <option value="BIAA">BIAA</option>
+          <option value="MSAC">MSAC</option>
+          <option value="Big 7">Big 7</option>
+          <option value="Skyline">Skyline</option>
+          <option value="Independent DIII">Independent DIII</option>
+          <option value="Liberty League">Liberty League</option>
+          <option value="Massachusetts State Collegiate Athletic Conference">
+            Massachusetts State Collegiate Athletic Conference
+          </option>
+          <option value="Michigan">Michigan</option>
+          <option value="Middle Atlantic Conference">
+            Middle Atlantic Conference
+          </option>
+          <option value="Midwest">Midwest</option>
+          <option value="Minnesota">Minnesota</option>
+          <option value="Northern Athletics Collegiate Conference">
+            Northern Athletics Collegiate Conference
+          </option>
+          <option value="NESCAC">NESCAC</option>
+          <option value="New England Women's and Men's Athletic Conference">
+            New England Women's and Men's Athletic Conference
+          </option>
+          <option value="New Jersey">New Jersey</option>
+          <option value="North Coast">North Coast</option>
+          <option value="Northwest">Northwest</option>
+          <option value="Ohio">Ohio</option>
+          <option value="Old Dominion">Old Dominion</option>
+          <option value="Presidents'">Presidents'</option>
+          <option value="So. Cal.">So. Cal.</option>
+          <option value="Southern Athletic Association">
+            Southern Athletic Association
+          </option>
+          <option value="USA South">USA South</option>
+          <option value="Upper Midwest">Upper Midwest</option>
+          <option value="Wisconsin">Wisconsin</option>
+          <option value="CIAA">CIAA</option>
+          <option value="GLIAC">GLIAC</option>
+          <option value="GAC">GAC</option>
+          <option value="Great Lakes">Great Lakes</option>
+          <option value="Great Midwest Athletic Conference">
+            Great Midwest Athletic Conference
+          </option>
+          <option value="Great Northwest">Great Northwest</option>
+          <option value="Gulf South">Gulf South</option>
+          <option value="Independent DII">Independent DII</option>
+          <option value="Lone Star">Lone Star</option>
+          <option value="Mid America">Mid America</option>
+          <option value="Mountain East Conference">
+            Mountain East Conference
+          </option>
+          <option value="Northeast 10">Northeast 10</option>
+          <option value="Northern Sun">Northern Sun</option>
+          <option value="Pennsylvania State Athletic Conference">
+            Pennsylvania State Athletic Conference
+          </option>
+          <option value="Rocky Mountain">Rocky Mountain</option>
+          <option value="SIAC">SIAC</option>
+          <option value="South Atlantic">South Atlantic</option>
+          <option value="Ivy">Ivy</option>
+          <option value="AAWU">AAWU</option>
+          <option value="WAC">WAC</option>
+          <option value="PCAA">PCAA</option>
+          <option value="Southland">Southland</option>
+          <option value="SWAC">SWAC</option>
+          <option value="BW">BW</option>
+          <option value="Western">Western</option>
+          <option value="ASUN">ASUN</option>
+          <option value="WAC">WAC</option>
+          <option value="INDAA">INDAA</option>
+          <option value="SCAC">SCAC</option>
+          <option value="UNI">UNI</option>
+          <option value="GWEST">GWEST</option>
+          <option value="MAAC">MAAC</option>
+          <option value="ATL10">ATL10</option>
+          <option value="Big South-OVC Association">
+            Big South-OVC Association
+          </option>
+          <option value="United Athletic Conference">
+            United Athletic Conference
+          </option>
+          <option value="Landmark Conference">Landmark Conference</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="division">Division: </label>
+        <select id="division" name="division">
+          <div>
+            <option value="">Select</option>
+            <option value="fbs">FBS</option>
+            <option value="B12">FCS</option>
+            <option value="B1G">II</option>
+            <option value="B1G">III</option>
+          </div>
+        </select>
+      </div>
+
+      <div>
+        <button>Submit</button>
+      </div>
+    </form>
+
+    <div id="HTR">
+      <h2>Season Record</h2>
+      <p></p>
+    </div>
+
+    <div id="HGD">
+      <h2>Season Game-By-Game Scores</h2>
+      <p></p>
+    </div>
+
+    <div id="HPD">
+      <h2>Season Poll Data</h2>
+      <p></p>
+    </div>
+  </body>
+</html>
